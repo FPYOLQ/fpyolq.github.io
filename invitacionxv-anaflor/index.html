@@ -283,6 +283,14 @@ const CONFIG = {
     </div>
   </section>
 
+  <!-- ============ CONFIRMACIÓN ============ -->
+  <section id="rsvp" style="padding-top:10px">
+    <p class="kicker reveal">Te espero</p>
+    <h2 class="sec-title script gold-text reveal">Confirma tu asistencia</h2>
+    <p class="note reveal" id="rsvpText">Tu presencia hará este día inolvidable. Toca el botón y se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+    <a class="btn btn-main reveal" id="waBtn" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>Confirmar asistencia</a>
+  </section>
+
   <!-- ============ CUENTA REGRESIVA ============ -->
   <section style="padding-top:30px">
     <p class="kicker reveal">El gran día se acerca</p>
@@ -295,14 +303,6 @@ const CONFIG = {
     </div>
     <p class="cd-msg" id="cdMsg" hidden></p>
     <a class="btn reveal" id="calBtn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agregar a mi calendario</a>
-  </section>
-
-  <!-- ============ CONFIRMACIÓN ============ -->
-  <section id="rsvp" style="padding-top:30px">
-    <p class="kicker reveal">Te espero</p>
-    <h2 class="sec-title script gold-text reveal">Confirma tu asistencia</h2>
-    <p class="note reveal" id="rsvpText">Tu presencia hará este día inolvidable.</p>
-    <a class="btn btn-main reveal" id="waBtn" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>Confirmar por WhatsApp</a>
   </section>
 
   <footer>
@@ -355,7 +355,7 @@ const CONFIG = {
   document.getElementById('mapRecep').href = CONFIG.mapaRecepcion;
   if (CONFIG.whatsapp) {
     const wa = document.getElementById('waBtn');
-    wa.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent('¡Hola! Confirmo mi asistencia a los XV años de Ana Flor. Mi nombre es: ');
+    wa.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent('¡Hola! Confirmo mi asistencia a los XV años de Ana Flor el sábado 9 de enero de 2027. Mi nombre es: ');
     wa.hidden = false;
   }
   const cal = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
