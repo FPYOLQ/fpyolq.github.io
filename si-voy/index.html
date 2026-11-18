@@ -790,7 +790,7 @@ h2 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: c
   var thanks = document.getElementById("vista-gracias");
   var wasThanks = false;
   function route() {
-    var isThanks = location.hash === "#gracias";
+    var isThanks = location.hash.indexOf("#gracias") === 0 || new URLSearchParams(location.search).has("gracias");
     main.hidden = isThanks;
     thanks.hidden = !isThanks;
     if (isThanks) {
@@ -801,6 +801,8 @@ h2 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: c
     }
     wasThanks = isThanks;
   }
+  // "Volver al inicio" quita el ?gracias=1 del link
+  Array.prototype.forEach.call(document.querySelectorAll(".back"), function (a) { a.href = location.pathname + "#inicio"; });
   window.addEventListener("hashchange", route);
   route();
 })();
